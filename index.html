@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+   
+    
+    <style>
+    body{
+    background-image: url("imgs/bgimg.webp");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    /*
+    height: 100vh; */
+    
+h2{
+    color: lightgreen;
+    text-align: center;
+    margin: 100px;
+    margin-left: 480px;
+    background-image: url("imgs/bgimg2.jpg");
+    background-size: auto;
+    width: 30%;
+    padding: 10px;
+    border-radius: 30px;
+
+}
+.continer{
+    display: grid;
+    grid-template-columns: 20fr 20fr 20fr;
+    row-gap: 10px;
+    column-gap: 20px;
+    width: 40%;
+    margin: 60px;
+}
+#c0,#c1,#c2,#c3,#c4,#c5,#c6,#c7,#c8,#c9{
+    background: aqua;
+   height: 100px;
+   width: 100px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+#c0:hover,#c1:hover,#c2:hover,#c3:hover,#c4:hover,#c5:hover,#c6:hover,#c7:hover,#c8:hover,#c9:hover{
+    background-color:lightgoldenrodyellow;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px red;
+}
+
+#res{
+    background: rgb(250, 19, 56);
+    padding: 10px;
+    color: azure;
+   margin-right: 80px;
+   border-radius: 15px;
+   width: 10%;
+   
+}
+#res:hover{
+    cursor: pointer;
+    background: burlywood;
+    color: red;
+}
+#winner{
+    color: antiquewhite;
+    font-size: 30px;
+    margin-right: 80px;
+}
+}
+    </style>
+</head>
+<body>
+    <h2>Tic Tac Toe Game</h2>
+    <center>
+     <div class="continer">
+         <div id="c0" onclick="Cell0()"> </div>
+         <div id="c1" onclick="Cell1()"> </div>
+         <div id="c2" onclick="Cell2()"> </div>
+         <div id="c3" onclick="Cell3()"></div>
+         <div id="c4" onclick="Cell4()"> </div>
+         <div id="c5" onclick="Cell5()"> </div>
+         <div id="c6" onclick="Cell6()"> </div>
+         <div id="c7" onclick="Cell7()"> </div>
+         <div id="c8" onclick="Cell8()"> </div>
+     </div>
+     <button id="res" onclick="Restart()">Restart</button>
+     <p id="winner"></p>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>
